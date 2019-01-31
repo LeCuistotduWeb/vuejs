@@ -1,0 +1,30 @@
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+
+    <div class="jumbotron">
+        
+        <div id="app">
+            <h1>{{ title }}</h1>
+        </div>
+    
+    </div>
+
+    <div id="app2">
+        <input type="text" placeholder="ajouter a la liste">
+        <a href="#" class="btn btn-primary" v-bind:title="btnMessage" @click="showList">{{ text }}</a>
+    </div>
+
+
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
