@@ -1,23 +1,26 @@
 var app = new Vue({
     el: '#app',
     data: {
-        title: 'Liste en vueJs'
-    }
-});
-
-
-var app2 = new Vue({
-    el: '#app2',
-    data: {
-        text: 'Afficher',
-        btnMessage: `Afficher la liste ${new Date()}`,
-        todo: {
-            item :'',
-            item :'',
-            item :'',
-        },
+        inputText: '',
+        success: true,
+        input: '',
+        todos: ['Learn JavaScript', 'Learn Vue', 'Build something awesome']
     },
     methods: {
-        
+        reverseList(){
+            return this.todos = this.todos.reverse()
+        },
+        onSubmit(){
+            this.inputText != '' ? this.todos.push(this.inputText) : '';
+            this.inputText = ''
+        },
+        deleteItem(item){
+            this.todos.pop(item)
+        },
+        deleteAllItems(){
+            for(todo of this.todos){
+                this.todos.pop(todo)
+            }
+        }
     },
-});
+})
