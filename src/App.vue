@@ -8,21 +8,36 @@
 
     <div class="container">
       
-      <!-- counter -->
-      <div class="row">
-        <Counter ></Counter>
-      </div>
-      
-      <!-- chronos -->
-      <div class="row">
-        <Chronometer ></Chronometer>
+      <!-- Todo list -->
+      <div class="row my-5">
+        <div class="col-sm-10 col-md-6">
+          <Todo listTitle="Liste 1"></Todo>
+        </div>
+        <div class="col-sm-10 col-md-6">
+          <Todo listTitle="Liste 2"></Todo>
+        </div>
       </div>
 
+      <hr>
+      
+      <div class="row">
+        <div class="col-sm-10 col-md-6">
+          <!-- counter -->
+          <Counter ></Counter>
+        </div>
+        
+        <div class="col-sm-10 col-md-6">
+          <!-- chronos -->
+          <Chronometer ></Chronometer>
+        </div>
+      </div>
+      
     </div> 
   </div>
 </template>
 
 <script>
+import Todo from './components/Todo.vue'
 import HelloWorld from './components/HelloWorld.vue'
 import Counter from './components/Counter.vue'
 import Chronometer from './components/Chronometer.vue'
@@ -30,10 +45,11 @@ import Chronometer from './components/Chronometer.vue'
 export default {
   name: 'app',
   components: {
+    Todo,
     HelloWorld,
     Counter,
     Chronometer,
-  }
+  },
 }
 </script>
 
