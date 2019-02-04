@@ -1,6 +1,6 @@
 <template>
-  <div class="todo-list">
-    <div class="alert alert-success">{{ msg }}</div>
+  <div class="hello">
+    {{ msg }}
   </div>
 </template>
 
@@ -15,4 +15,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
 </style>
