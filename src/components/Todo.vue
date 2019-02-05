@@ -14,7 +14,7 @@
 
        <ul class="list-group">
         
-        <li v-for="todo in filteredTodos" class="list-group-item" :class="{completed: todo.completed, editing: todo === editing}">
+        <li v-for="(todo, index) in filteredTodos" :key="index" class="list-group-item" :class="{completed: todo.completed, editing: todo === editing}">
             <input type="checkbox" class="mr-2" v-model="todo.completed">
             
             <input type="text" v-model="todo.text" @keyup.enter="doneEdit" @keyup.esc="cancelEdit" v-if="todo === editing" v-focus="todo === editing" @blur="doneEdit">
@@ -54,7 +54,7 @@ export default {
             newTodo: '',
             filter: 'all',
             editing: null,
-            oldTodo: '',
+            oldTodo: ''
         }
     },
     props: {
@@ -104,7 +104,7 @@ export default {
             this.oldTodo = todo.text
             return this.editing = todo
         },
-        doneEdit(todo){
+        doneEdit(){
             return this.editing = null
         },
         cancelEdit(){
