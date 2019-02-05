@@ -1,5 +1,9 @@
 # vuejs2
 
+This is project created for learn and work the VueJs Framework.
+
+![screeshot](src/assets/screencapture.jpg)
+
 ## Project setup
 ```
 npm install
@@ -13,16 +17,6 @@ npm run serve
 ### Compiles and minifies for production
 ```
 npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
 ```
 
 ### Customize configuration
